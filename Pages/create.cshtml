@@ -1,0 +1,107 @@
+﻿@page
+@{ 
+    ViewData["Title"] = "List Your Car";
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Sharyna.style.css" asp-append-version="true" />
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    <html>
+    <body>
+        <display>Fill in your Car info for selling Ad</display>
+        <br />
+        <div class="container">
+            <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                <div class="form-floating mb-3">
+                    <select class="form-select" id="brand" aria-label="Brand">
+                        <option value="BMW">BMW</option>
+                        <option value="Ford">Ford</option>
+                        <option value="Mazda">Mazda</option>
+                    </select>
+                    <label for="brand"></label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <select class="form-select" id="model" aria-label="Model">
+                        <option value="730">730</option>
+                        <option value="740">740</option>
+                        <option value="750">750</option>
+                        <option value="6">6</option>
+                        <option value="Bronco">Bronco</option>
+                    </select>
+                    <label for="model"></label>
+                </div>
+                <div class="form-floating mb-3">
+                    <select class="form-select" id="gear" aria-label="Gear">
+                        <option value="Automatic">Automatic</option>
+                        <option value="Manual">Manual</option>
+                    </select>
+                    <label for="gear"></label>
+                </div>
+                <div class="form-floating mb-10">
+                    <input class="form-control" id="yearModel" type="text" placeholder="Year Model" data-sb-validations="required" />
+                    <label for="yearModel"></label>
+                    <div class="invalid-feedback" data-sb-feedback="yearModel:required">Year Model is required.</div>
+                </div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" id="color" type="text" placeholder="Color" data-sb-validations="required" />
+                    <label for="color"></label>
+                    <div class="invalid-feedback" data-sb-feedback="color:required">Color is required.</div>
+                </div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" id="kilometer" type="text" placeholder="Kilometer" data-sb-validations="required" />
+                    <label for="kilometer"></label>
+                    <div class="invalid-feedback" data-sb-feedback="kilometer:required">Kilometer is required.</div>
+                </div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" id="fuel" type="text" placeholder="Fuel" data-sb-validations="required" />
+                    <label for="fuel"></label>
+                    <div class="invalid-feedback" data-sb-feedback="fuel:required">Fuel is required.</div>
+                </div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" id="importSource" type="text" placeholder="Import Source " data-sb-validations="required" />
+                    <label for="importSource"></label>
+                    <div class="invalid-feedback" data-sb-feedback="importSource:required">Import Source is required.</div>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input class="form-control" id="price" type="text" placeholder="Price" data-sb-validations="required" />
+                    <label for="price"></label>
+                    <div class="invalid-feedback" data-sb-feedback="price:required">Price is required.</div>
+                </div>
+                <div class="mb-3">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" id="mojaz" type="checkbox" name="mojaz" />
+                        <label class="form-check-label" for="mojaz">Mojaz</label>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" id="ownershipVerification" type="checkbox" name="ownershipVerification" />
+                        <label class="form-check-label" for="ownershipVerification">Ownership Verification </label>
+                    </div>
+                </div>
+                <div class="form-floating mb-3">
+                    <textarea class="form-control" id="typeYourCarInfoHere" type="text" placeholder="Type your car info here" style="height: 10rem;" data-sb-validations="required"></textarea>
+                    <label for="typeYourCarInfoHere"></label>
+                    <div class="invalid-feedback" data-sb-feedback="typeYourCarInfoHere:required">Type your car info here is required.</div>
+                </div>
+                <div class="d-none" id="submitSuccessMessage">
+                    <div class="text-center mb-3">
+                        <div class="fw-bolder">Form submission successful!</div>
+                    </div>
+                </div>
+                <div class="d-none" id="submitErrorMessage">
+                    <div class="text-center text-danger mb-3">Error sending message!</div>
+                </div>
+                <div class="d-grid">
+                    <button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+
+    </body>
+
+</html>
+    }
+

@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Sharyna</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Sharyna.style.css" asp-append-version="true" />
+</head>
+<body style="background-color: rgb(171,154,108); overflow-x: hidden;">
+
+    <nav style="background-color:rgb(255,255,255); border-bottom: 2px solid rgba(255,255,255,0.69)" class="navbar">
+        <div class="container-fluid">
+
+            <a class="navbar-brand" href="#" style="color:rgb(171,154,108); font-weight:bold;">
+                <img src="/img/Sharyna-logo.png" class="d-inline-block align-text-top logo">
+            </a>
+
+            <form class="d-flex">
+
+                <a asp-page="/Index">
+                    <button type="button" class="nav-button">Home</button>
+                </a>
+
+                <a asp-page="/contact_us">
+                    <button type="button" class="nav-button">contact us</button>
+                </a>
+
+                <a asp-page="/create">
+                    <button type="button" class=nav-button>advertise</button>
+                </a>
+
+                <a asp-page="showrooms">
+                    <button type="button" class="nav-button">show rooms</button>
+                </a>
+            </form>
+            <partial name="_LoginPartial" />
+        </div>
+    </nav>
+    <br>
+    <br />
+
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <div class="footer-clean">
+        <footer>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="#">Car Selling</a></li>
+                            <li><a href="#">Advertisements</a></li>
+                            <li><a href="#">Hosting</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="#">Company</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Legacy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>Careers</h3>
+                        <ul>
+                            <li><a href="#">Job openings</a></li>
+                            <li><a href="#">Employee success</a></li>
+                            <li><a href="#">Benefits</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 item social">
+                        <a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a>
+                        <p class="copyright">SHARYNA © 2022</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
